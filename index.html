@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Loved+by+the+King&family=Stylish&family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tabuada</title>
+    <script>
+        function gerarTabuada(){
+        var numero = parseInt(document.getElementById('numero').value) 
+        var tabela = document.getElementById('tabela-tabuada');
+       tabela.innerHTML= ""
+       for (var i = 1; i<=10; i++){
+        var resultado = numero * i
+        var linha ="<tr> <td>" + numero + " x "
+             + i + " = " + resultado + "</td><td>";
+        tabela.innerHTML += linha
+
+       }
+        }
+
+    </script>
+</head>
+<body><center>
+    <h1>Gerador de Tabuada</h1>
+    <p>Digite um valor para gerar sua tabuada:</p><br>
+    <input type="text" id="numero">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button><br><br><br>
+    <table id="tabela-tabuada"></table></center>
+
+    <footer class="fixarRodape">
+        <small>
+            &copy; All Rights Reserved - Laryssa Siqueira - 2023
+        </small>
+    </footer>
+    
+</body>
+</html>
